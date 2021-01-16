@@ -65,8 +65,8 @@
 199.232.68.133     avatars8.githubusercontent.com
 
 
-![登录界面](https://github.com/mywgl/Images/blob/main/img.png)
+![登录界面](https://github.com/mywgl/Images/blob/main/smbams/img.png)
 
 
-![登录界面](https://github.com/mywgl/Images/blob/main/Snipaste_2021-01-16_23-40-07.png)
+![主页](https://github.com/mywgl/Images/blob/main/smbams/Snipaste.png)
 
