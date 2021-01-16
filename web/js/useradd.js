@@ -110,7 +110,7 @@ $(function(){
 		validateTip(ruserPassword.next(),{"color":"#666666"},"* 请输入与上面一只的密码",false);
 	}).bind("blur",function(){
 		if(ruserPassword.val() != null && ruserPassword.val().length > 6
-				&& ruserPassword.val().length < 20 && userPassword.val() == ruserPassword.val()){
+				&& ruserPassword.val().length < 20 && userPassword.val() === ruserPassword.val()){
 			validateTip(ruserPassword.next(),{"color":"green"},imgYes,true);
 		}else{
 			validateTip(ruserPassword.next(),{"color":"red"},imgNo + " 两次密码输入不一致，请重新输入",false);
@@ -121,7 +121,7 @@ $(function(){
 	birthday.bind("focus",function(){
 		validateTip(birthday.next(),{"color":"#666666"},"* 点击输入框，选择日期",false);
 	}).bind("blur",function(){
-		if(birthday.val() != null && birthday.val() != ""){
+		if(birthday.val() != null && birthday.val() !== ""){
 			validateTip(birthday.next(),{"color":"green"},imgYes,true);
 		}else{
 			validateTip(birthday.next(),{"color":"red"},imgNo + " 选择的日期不正确,请重新输入",false);
