@@ -43,8 +43,8 @@ $(function(){
 	saveBtn.on("click",function(){
 		proContact.blur();
 		proPhone.blur();
-		if(proContact.attr("validateStatus") == "true" && 
-				proPhone.attr("validateStatus") == "true"){
+		if(proContact.attr("validateStatus") === "true" &&
+				proPhone.attr("validateStatus") === "true"){
 			if(confirm("是否确认提交数据")){
 				$("#providerForm").submit();
 			}
