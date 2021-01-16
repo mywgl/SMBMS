@@ -12,3 +12,5 @@ sql的数据jar包没有包含在项目中需要自行导入，我是把mysql-co
 然后再修改mysql的配置文件改成自已mysql的密码
 
 然后就可以启动项目了
+
+![美图](https://github.com/mywgl/Images/blob/main/img.png)
