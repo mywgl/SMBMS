@@ -16,7 +16,8 @@
 
 下面图片如果无法展示需要在C:\Windows\System32\drivers\etc\host文件中加入如下
 
-//# Solved the issue of GitHub images not being displayed
+\# Solved the issue of GitHub images not being displayed
+
 151.101.184.133    assets-cdn.github.com
 
 151.101.184.133    raw.githubusercontent.com
