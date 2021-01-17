@@ -36,8 +36,8 @@ $(function(){
 		success:function(data){//data：返回数据（json对象）
 			if(data != null){
 				userRole.html("");
-				var options = "<option value=\"0\">请选择</option>";
-				for(var i = 0; i < data.length; i++){
+				let options = "<option value=\"0\">请选择</option>";
+				for(let i = 0; i < data.length; i++){
 					//alert(data[i].id);
 					//alert(data[i].roleName);
 					options += "<option value=\""+data[i].id+"\">"+data[i].roleName+"</option>";
@@ -46,7 +46,8 @@ $(function(){
 			}
 		},
 		error:function(data){//当访问时候，404，500 等非200的错误状态码
-			validateTip(userRole.next(),{"color":"red"},imgNo+" 获取用户角色列表error",false);
+			if (data !=null)
+			    validateTip(userRole.next(),{"color":"red"},imgNo+" 获取用户角色列表error",false);
 		}
 	});
 
@@ -73,6 +74,7 @@ $(function(){
 				}
 			},
 			error:function(data){//当访问时候，404，500 等非200的错误状态码
+				if (data !=null)
 				validateTip(userCode.next(),{"color":"red"},imgNo+" 您访问的页面不存在",false);
 			}
 		});
@@ -131,7 +133,7 @@ $(function(){
 	phone.bind("focus",function(){
 		validateTip(phone.next(),{"color":"#666666"},"* 请输入手机号",false);
 	}).bind("blur",function(){
-		var patrn=/^(13[0-9]|15[0-9]|18[0-9])\d{8}$/;
+		let patrn=/^(13[0-9]|15[0-9]|18[0-9])\d{8}$/;
 		if(phone.val().match(patrn)){
 			validateTip(phone.next(),{"color":"green"},imgYes,true);
 		}else{

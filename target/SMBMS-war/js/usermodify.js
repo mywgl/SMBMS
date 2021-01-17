@@ -32,7 +32,7 @@ $(function(){
 				for(var i = 0; i < data.length; i++){
 					//alert(data[i].id);
 					//alert(data[i].roleName);
-					if(rid != null && rid != undefined && data[i].id == rid ){
+					if(rid !== null && rid !== undefined && data[i].id === rid ){
 						options += "<option selected=\"selected\" value=\""+data[i].id+"\" >"+data[i].roleName+"</option>";
 					}else{
 						options += "<option value=\""+data[i].id+"\" >"+data[i].roleName+"</option>";
@@ -97,10 +97,10 @@ $(function(){
 		phone.blur();
 		birthday.blur();
 		userRole.blur();
-		if(userName.attr("validateStatus") == "true" 
-			&& phone.attr("validateStatus") == "true"
-			&& birthday.attr("validateStatus") == "true"
-			&& userRole.attr("validateStatus") == "true"){
+		if(userName.attr("validateStatus") === "true"
+			&& phone.attr("validateStatus") === "true"
+			&& birthday.attr("validateStatus") === "true"
+			&& userRole.attr("validateStatus") === "true"){
 			if(confirm("是否确认要提交数据？")){
 				$("#userForm").submit();
 			}
@@ -109,10 +109,10 @@ $(function(){
 	
 	backBtn.on("click",function(){
 		//alert("modify: "+referer);
-		if(referer != undefined 
-			&& null != referer 
-			&& "" != referer
-			&& "null" != referer
+		if(referer !== undefined
+			&& null !== referer
+			&& "" !== referer
+			&& "null" !== referer
 			&& referer.length > 4){
 		 window.location.href = referer;
 		}else{
